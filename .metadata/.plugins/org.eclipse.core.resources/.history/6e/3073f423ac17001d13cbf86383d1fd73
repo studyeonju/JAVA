@@ -1,0 +1,12 @@
+package RegularExpression;
+
+import java.util.regex.Pattern;
+
+public class ex01 {
+	public static void main(String[] args) {
+		String pattern = "\d{1}";
+		String str = "s";
+		boolean regex = Pattern.matches(pattern, str);
+		System.out.println(regex);
+	}
+}

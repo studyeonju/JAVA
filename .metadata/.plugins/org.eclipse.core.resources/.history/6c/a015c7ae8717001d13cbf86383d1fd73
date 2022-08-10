@@ -1,0 +1,9 @@
+package RegularExpression;
+
+public class ex01 {
+	public static void main(String[] args) {
+		String pattern = "23";
+		String str = "djf23232323iowej32432fds_Dfn2.fdl23$#@$fidjdsklf32";
+		System.out.println(str.replaceAll(pattern, "@"));
+	}
+}

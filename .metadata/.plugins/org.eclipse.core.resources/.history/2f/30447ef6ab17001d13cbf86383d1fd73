@@ -1,0 +1,12 @@
+package RegularExpression;
+
+import java.util.regex.Pattern;
+
+public class ex01 {
+	public static void main(String[] args) {
+		String pattern = "^[0-9]*$";
+		String str = "jklgjk324234";
+		boolean regex = Pattern.matches(pattern, str);
+		System.out.println(regex);
+	}
+}
