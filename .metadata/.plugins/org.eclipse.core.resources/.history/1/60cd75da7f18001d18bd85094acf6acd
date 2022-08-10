@@ -1,0 +1,14 @@
+package RegularExpression;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ex07 {
+	public static void main(String[] args) {
+		String str = "포도, 황도, 백도, 도토리";
+		System.out.println(str.replace("도", "동"));
+		
+		
+		
+	}
+}

@@ -18,8 +18,7 @@ public class ex07 {
 		System.out.println(str3.replaceAll(".", "/"));
 		
 		
-		String number = "dsfjknwenrw.?n2++3!12@3njsndjsa12sdfs09ddd042,2911///@";
-		System.out.println(number.replaceAll("[^0-9]", ""));
+		
 		
 	}
 }
