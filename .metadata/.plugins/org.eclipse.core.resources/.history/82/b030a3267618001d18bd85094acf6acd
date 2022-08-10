@@ -1,0 +1,17 @@
+package RegularExpression;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ex05 {
+	public static void main(String[] args) {
+		String regex = "[A-Z]";
+		String str = "xyzABC";
+		
+		Pattern pattern = Pattern.compile(regex); // 패턴정의
+		Matcher match = pattern.matcher(str); // 매치 되는 값을 저장
+		
+		System.out.println(match.lookingAt());
+		
+	}
+}

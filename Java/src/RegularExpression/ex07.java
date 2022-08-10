@@ -1,0 +1,20 @@
+package RegularExpression;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ex07 {
+	public static void main(String[] args) {
+		String regex = "(02|010)-\\d{3,4}-\\d{4}";
+		String str1 = "010-9876-5432";
+		String str2 = "010-abcd-1234";
+		
+		Pattern pattern = Pattern.compile(regex); 
+		Matcher match1 = pattern.matcher(str1); 
+		Matcher match2 = pattern.matcher(str2);
+		
+		System.out.println(match1.matches());
+		System.out.println(match2.matches());
+		
+	}
+}
