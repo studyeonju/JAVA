@@ -1,0 +1,17 @@
+package RegularExpression;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ex04 {
+	public static void main(String[] args) {
+		String regex = "[a-zA-Z]*o[a-zA-z]*";
+		String str = "HEllo 123Wo 9 rld5StuD67yEoNJ8u";
+		
+		Pattern pattern = Pattern.compile(regex); // 패턴정의
+		Matcher match = pattern.matcher(str); // 매치 되는 값을 저
+		while(match.find()) {
+			System.out.println(match.group());
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package RegularExpression;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ex02 {
+	public static void main(String[] args) {
+		
+		String regex = "(02|010)-\\d{3,4}-\\d{4}";
+		String input1 = "010-1234-3214";
+		
+		System.out.println(matcher.find());// find : 문자열에서 패턴과 일치하는 부분이 있는지 확인
+		
+	}
+}
