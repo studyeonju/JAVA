@@ -1,8 +1,0 @@
-package RegularExpression;
-
-public class ex01 {
-	public static void main(String[] args) {
-		String pattern = "^[0-9]*$";
-		String str = "djfiowej32432fds_Dfn2.fdl23$#@$fidjdsklf32";
-	}
-}

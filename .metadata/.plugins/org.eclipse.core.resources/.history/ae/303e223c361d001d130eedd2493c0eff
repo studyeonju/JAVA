@@ -1,0 +1,12 @@
+package RegularExpression;
+
+import java.util.Scanner;
+
+public class example {
+	public static void main(String[] args) {
+	 while(true) {
+		 Scanner sc = new Scanner(System.in);
+		 sc.next();
+	 }
+	}
+}

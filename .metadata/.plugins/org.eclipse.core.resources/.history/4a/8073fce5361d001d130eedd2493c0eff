@@ -1,0 +1,13 @@
+package RegularExpression;
+
+import java.util.Scanner;
+
+public class example {
+	public static void main(String[] args) {
+	 while(true) {
+		 System.out.println("1.주민등록번호 2.이메일 3.휴대폰번호");
+		 Scanner sc = new Scanner(System.in);
+		 String str = sc.next();
+	 }
+	}
+}
