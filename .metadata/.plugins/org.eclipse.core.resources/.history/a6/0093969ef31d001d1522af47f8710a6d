@@ -1,0 +1,15 @@
+package URL;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Ex01 {
+	public static void main(String[] args) throws MalformedURLException {
+		//객체 생성하는 방
+		URL url = new URL("https://n.news.naver.com/mnews/article/056/0011322396?sid=103");
+		System.out.println("프로토콜:"+url.getProtocol());
+		System.out.println("프로토콜:"+url.getPort());
+		System.out.println("호스:"+url.getHost());
+		
+	}
+}

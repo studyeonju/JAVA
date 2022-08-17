@@ -1,0 +1,10 @@
+package URL;
+
+import java.net.URI;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		URL url = new URI("https://n.news.naver.com/mnews/article/056/0011322396?sid=103");
+		
+	}
+}
