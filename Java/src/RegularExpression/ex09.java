@@ -1,0 +1,27 @@
+package RegularExpression;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ex09 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("이메일 입력해주세요!");
+		String str = sc.next();
+//		String input = "";
+		String input = "^\\w+@[a-zA-Z]+\\.+[a-zA-Z]+$";
+	
+		Pattern pattern = Pattern.compile(input);
+		Matcher match = pattern.matcher(str); 
+		sc.close();
+		
+		while(match.find()) { 
+			System.out.printf(match.group());
+			
+		} 
+		
+		
+	}
+}
+
