@@ -6,7 +6,7 @@ import java.net.URL;
 public class Ex01 {
 	public static void main(String[] args) throws IOException {
 		//객체 생성
-		URL url = new URL("https://n.news.naver.com/mnews/article/056/0011322396?sid=103");
+		URL url = new URL("http://localhost:8080/list");
 		
 		
 		//경로명 반환

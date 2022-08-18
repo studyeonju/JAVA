@@ -1,0 +1,25 @@
+package URL;
+
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class Ex03 {
+	static URL url = null;
+	static URLConnection conn = null;
+	public static void main(String[] args) {
+		try {
+			url = new URL("http://www.google.co.kr");
+			conn = url.openConnection(); //해당 url에서 페이지 정보를 가져오기 위해서 URLConnection을 사용
+
+			System.out.println("contentType: "+conn.getContentType()); // 미디어타입을 반환
+			System.out.println("content-encoding: "+conn.getContentEncoding()); //길이반환 헤더가 없는 경우 -1 반환
+			System.out.println("content-length: "+conn.getContentLength());
+			System.out.println("content-inputstream: "+conn.getInputStream());
+			System.out.println("url: "+conn.getURL());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

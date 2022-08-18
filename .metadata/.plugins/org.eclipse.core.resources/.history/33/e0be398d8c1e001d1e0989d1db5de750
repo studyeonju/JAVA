@@ -1,0 +1,18 @@
+package URL;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class Ex02 {
+	static URL url = null;
+	static URLConnection conn = null;
+	public static void main(String[] args) {
+		try {
+			url = new URL("");
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}
