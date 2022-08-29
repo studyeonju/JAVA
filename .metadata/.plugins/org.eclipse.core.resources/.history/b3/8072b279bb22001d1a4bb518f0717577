@@ -1,0 +1,62 @@
+package URL;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Ex07 {
+	public static void main(String[] args) throws IOException {
+		sendPosJson();
+		//sendGetJson();
+	}
+
+	private static void sendGetJson() throws IOException {
+		URL url = new URL("http://localhost:8080/get2");
+		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		conn.setRequestMethod("GET");
+		conn.setRequestProperty("Content-Type", "application/json");
+		conn.setRequestProperty("Accept", "application/json");
+		conn.setRequestProperty("id", "faker");
+		conn.setRequestProperty("game", "lol");
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(),"utf-8"));
+		StringBuilder response = new StringBuilder();
+		String responseLine = null;
+		while((responseLine=br.readLine())!=null) {
+			response.append(responseLine.trim());
+			
+		}
+		System.out.println(response.toString());
+		
+	}
+
+	private static void sendPosJson() throws IOException {
+		URL url;
+		url = new URL("http://localhost:8080/main");
+		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Content-Type", "application/json;utf-8");
+			conn.setRequestProperty("Accept", "application/json");
+			conn.setDoOutput(true);
+			String jsonInputString = "{id:faker,game:lol}";
+		OutputStream os = conn.getOutputStream();
+		byte[] input = jsonInputString.getBytes("utf-8");
+		os.write(input);
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(),"utf-8"));
+		StringBuilder response = new StringBuilder();
+		String responseLine = null;
+		while((responseLine = br.readLine())!=null) {
+			response.append(responseLine.toString());
+		}
+		System.out.println(response);
+		System.out.println("응답코드"+conn.getResponseCode());
+//		os.write(input,0, 0);
+		
+	}
+	
+}

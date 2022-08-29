@@ -1,0 +1,11 @@
+package Try;
+
+import java.io.FileWriter;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		FileWriter f = null;
+		f = new FileWriter("data.txt");
+		f.write("Hello");
+	}
+}

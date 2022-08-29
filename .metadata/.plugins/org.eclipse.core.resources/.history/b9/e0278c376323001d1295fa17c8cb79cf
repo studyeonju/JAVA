@@ -1,0 +1,25 @@
+package Enum;
+
+
+public enum Ex01{
+	USER("1","유저"),
+	ADMIN("2","어드민");
+	
+	private final String code;
+	private final String symbol;
+	Ex01(String code,String symbol){
+		this.code = code;
+		this.symbol = symbol;
+	}
+	public String getCode() {
+		return code;
+	}
+	public String getSymbol() {
+		return symbol;
+	}
+	
+}
+
+public final class main2{
+	ma
+}

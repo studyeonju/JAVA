@@ -1,0 +1,14 @@
+package Enum;
+
+public class Enum_01 {
+	int x;
+	int y;
+	Direction dir;
+	void init() {
+		dir = Direction.EAST
+	}
+}
+
+enum Direction {
+	EAST,SOUTH, WEST, NORTH
+}

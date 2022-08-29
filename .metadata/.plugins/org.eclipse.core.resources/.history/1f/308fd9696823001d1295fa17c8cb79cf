@@ -1,0 +1,22 @@
+package Enum;
+
+public class Ex02 {
+	public static final String MALE ="MALE";
+	public static final String FEMALE ="FEMALE";
+	public static void main(String[] args) {
+		String gender1;
+		
+		gender1 = Ex02.MALE;
+		gender1 = Ex02.FEMALE;
+		
+		gender1="baby";
+		Gender gender2;
+		
+	
+		
+	}
+}
+
+enum Gender{
+	MALE,FEMALE;
+}

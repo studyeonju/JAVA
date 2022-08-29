@@ -1,0 +1,27 @@
+package Enum;
+public enum  main {
+    USER("1","유저"),
+    ADMIN("2","어드민")
+    ;
+    private final String code;
+    private final String symbol;
+
+    main(String code, String symbol) {
+        this.code = code;
+        this.symbol = symbol;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+}
+
+public final class main2 {
+    public static void main(String[] args) {
+        Account account = new Account(main.USER.getCode());
+    }
+}

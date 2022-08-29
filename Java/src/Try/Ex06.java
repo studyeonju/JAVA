@@ -1,0 +1,45 @@
+package Try;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class Ex06 {
+	public static void main(String[] args) {
+		URL url = null;
+		HttpURLConnection conn =null;
+		OutputStreamWriter osw = null;
+		BufferedWriter bw = null;
+		PrintWriter out = null;
+		try {
+			osw = new OutputStreamWriter(conn.getOutputStream(), "UTF-8");
+			bw = new BufferedWriter(osw);
+			out = new PrintWriter(bw, false);
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				osw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				bw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}

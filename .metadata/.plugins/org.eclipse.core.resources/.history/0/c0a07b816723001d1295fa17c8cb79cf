@@ -1,0 +1,19 @@
+package Enum;
+
+public class Enum_01 {
+	int x;
+	int y;
+	Direction dir;
+	void init() {
+		System.out.println(dir);
+		dir = Direction.EAST;
+		System.out.println(dir);
+	}
+	public  void main(String[] args) {
+		init();
+	}
+}
+
+enum Direction {
+	EAST,SOUTH, WEST, NORTH
+}

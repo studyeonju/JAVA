@@ -1,0 +1,11 @@
+package Enum;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public enum PayGroup {
+CASH("현금",Arrays.asList("계좌이체","무통장입금","현장결제","토스")),
+CARD("카드",Arrays.asList("페이코","신용카드","카카오페이","배민페이")),
+ETC("기타",Arrays.asList("포인트","쿠폰")),
+EMPTY("결제종류없음",Collections.EMPTY_LIST);
+}

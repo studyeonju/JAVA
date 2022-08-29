@@ -1,0 +1,20 @@
+package URL;
+
+import java.net.URL;
+
+public class Ex07 {
+	public static void main(String[] args) {
+		sendPosJson();
+		sendGetJson();
+	}
+
+	private static void sendGetJson() {
+		
+	}
+
+	private static void sendPosJson() {
+		URL url = new URL("www.google.com");
+		
+	}
+	
+}

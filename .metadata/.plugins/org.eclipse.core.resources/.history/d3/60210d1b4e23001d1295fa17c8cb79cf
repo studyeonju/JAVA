@@ -1,0 +1,15 @@
+package URL;
+
+import java.io.BufferedReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class Ex08 {
+	private static HttpURLConnection connection;
+	public static void main(String[] args) {
+		BufferedReader reader;
+		String line;
+		StringBuffer responseContent = new StringBuffer();
+		URL url = new URL("");
+	}
+}

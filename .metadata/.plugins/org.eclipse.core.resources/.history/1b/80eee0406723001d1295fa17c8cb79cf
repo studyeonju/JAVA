@@ -1,0 +1,9 @@
+package Enum;
+
+public class Enum_01 {
+
+}
+
+enum Direction {
+	EAST,SOUTH, WEST, NORTH
+}

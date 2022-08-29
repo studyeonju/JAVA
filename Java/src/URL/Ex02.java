@@ -12,7 +12,7 @@ public class Ex02 {
 	static URLConnection conn = null;
 	public static void main(String[] args) {
 		try {
-			url = new URL("http://localhost:8080/list"); //객체생성
+			url = new URL("http://www.naver.com/"); //객체생성
 			conn = url.openConnection(); //해당 url에 대한 URLConnection객체를 얻기 위해 URL객체의 openConnection() 사용
 			InputStream in = conn.getInputStream(); // inputStream 값 반환 
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));

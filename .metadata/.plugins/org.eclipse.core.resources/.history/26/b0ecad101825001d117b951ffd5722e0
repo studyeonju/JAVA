@@ -1,0 +1,46 @@
+package Enum;
+
+enum Currency {
+	DOLLAR("달러",1300), EURO("유로",1300), YEN("엔화",980), YUAN("위안",190);
+	String name;
+	int value;
+
+	private Currency(String name, int value) {
+		this.name = name;
+		this.value = value;
+	}
+
+	public int getVaule() {
+		return value;
+	}
+	public String getName() {
+		return name;
+	}
+}
+
+public class Ex04 {
+	public static void main(String[] args) {
+		Currency c = Currency.valueOf("YEN");// Currency enum 에서 'YEN' 데이터 가져온다.
+		System.out.println("이름 : "+c.name()); //열거형 상수의 이름을 반환
+		System.out.println("ordinal : "+c.ordinal()); //열거형 상수의 정의된 순서값 반환 0부터 시작
+		
+		Currency[] lists = Currency.values();
+		System.out.println(Currency.values());
+		
+		
+		switch(c) {
+		case DOLLAR:
+			System.out.println(c.getName()+"환율은 "+c.getVaule()+"입니다");
+			break;
+		case EURO:
+			System.out.println(c.getName() + "환율은 "+c.getVaule()+"입니다");
+			break;
+		case YEN:
+			System.out.println(c.getName()+"환율은 "+c.getVaule()+"입니다");
+			break;
+		case YUAN:
+			System.out.println(c.getName()+"환율은 "+c.getVaule()+"입니다");
+			break;
+		}
+	}
+}

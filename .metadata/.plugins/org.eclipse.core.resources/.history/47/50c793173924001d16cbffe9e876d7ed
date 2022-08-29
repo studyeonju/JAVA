@@ -1,0 +1,15 @@
+package Try;
+
+public class Ex05 {
+	public static void main(String[] args) {
+		a();
+	}
+
+	private static void a() {
+		try(Class.forName("aaa")){
+			
+		}catch (Exception e) {
+			
+		}
+	}
+}

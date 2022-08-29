@@ -1,0 +1,6 @@
+package Try;
+
+public class Ex03 implements AutoCloseable{
+	
+
+}

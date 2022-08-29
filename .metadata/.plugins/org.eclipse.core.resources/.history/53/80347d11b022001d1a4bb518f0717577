@@ -1,0 +1,17 @@
+
+package URL;
+
+import java.net.URLEncoder;
+
+public class Ex06 {
+	public static void main(String[] args) {
+		
+	}
+	public void URLEncode() {
+		String enUrl="";
+		try {
+			enUrl = URLEncoder.encode("연주","UTF-8");
+			
+		}
+	}
+}

@@ -1,0 +1,20 @@
+package RegularExpression2;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ex05 {
+	public static void main(String[] args) {
+		String regex = "[A-Z]";
+		String str1 = "xyzABC";
+		String str2 = "ABC123";
+		
+		Pattern pattern = Pattern.compile(regex); 
+		Matcher match1 = pattern.matcher(str1); 
+		Matcher match2 = pattern.matcher(str2); 
+		
+		System.out.println(match1.lookingAt());
+		System.out.println(match2.lookingAt());
+		
+	}
+}

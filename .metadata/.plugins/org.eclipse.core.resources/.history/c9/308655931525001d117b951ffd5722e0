@@ -1,0 +1,43 @@
+package Enum;
+
+enum Currency {
+	DOLLAR("달러",1300), EURO("유로",1300), YEN("엔화",980), YUAN("위안",190);
+	String name;
+	int value;
+
+	private Currency(String name, int value) {
+		this.name = name;
+		this.value = value;
+	}
+
+	public int getVaule() {
+		return value;
+	}
+	public String getName() {
+		return name;
+	}
+}
+
+public class Ex04 {
+	public static void main(String[] args) {
+//		Currency c = Currency.valueOf("DOLLAR");
+		Currency c = Currency.YUAN;
+		
+		
+		System.out.println(c.name());
+		switch(c) {
+		case DOLLAR:
+			System.out.println(c.getName()+"환율은 "+c.getVaule()+"입니다");
+			break;
+		case EURO:
+			System.out.println(c.getName() + "환율은 "+c.getVaule()+"입니다");
+			break;
+		case YEN:
+			System.out.println(c.getName()+"환율은 "+c.getVaule()+"입니다");
+			break;
+		case YUAN:
+			System.out.println(c.getName()+"환율은 "+c.getVaule()+"입니다");
+			break;
+		}
+	}
+}

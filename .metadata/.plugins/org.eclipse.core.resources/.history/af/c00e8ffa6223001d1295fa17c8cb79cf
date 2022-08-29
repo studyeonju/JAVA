@@ -1,0 +1,24 @@
+package Enum;
+
+public enum EnumEx{
+	USER("1","유저"),
+	ADMIN("2","어드민");
+	
+	private final String code;
+	private final String symbol;
+	EnumEx(String code,String symbol){
+		this.code = code;
+		this.symbol = symbol;
+	}
+	public String getCode() {
+		return code;
+	}
+	public String getSymbol() {
+		return symbol;
+	}
+}
+public class Ex01 {
+public static void main(String[] args) {
+	
+}	
+}

@@ -1,0 +1,26 @@
+package URL;
+
+import java.io.BufferedReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+
+public class Ex08 {
+	private static HttpURLConnection connection;
+	public static void main(String[] args) {
+		BufferedReader reader;
+		String line;
+		StringBuffer responseContent = new StringBuffer();
+		try {
+			URL url = new URL("");
+			connection.setRequestMethod("GET");
+			connection.setConnectTimeout(5000);
+			connection.setReadTimeout(5000);
+			
+		} catch (MalformedURLException | ProtocolException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

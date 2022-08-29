@@ -8,7 +8,6 @@ public class Ex01 {
 		//객체 생성
 		URL url = new URL("http://localhost:8080/list");
 		
-		
 		//경로명 반환
 		System.out.println("경로명:"+url.getPath());
 		//프로토콜명 반환

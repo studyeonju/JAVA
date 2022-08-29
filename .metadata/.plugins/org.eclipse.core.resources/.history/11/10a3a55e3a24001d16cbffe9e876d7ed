@@ -1,0 +1,23 @@
+package Try;
+
+import java.io.BufferedWriter;
+import java.io.PrintWriter;
+
+public class Ex05 {
+	public static void main(String[] args) {
+		a();
+	}
+
+	private static void a() {
+		try (
+			BufferedWriter bw = new BufferedWriter();
+			PrintWriter out = new PrintWriter(bw, false);
+			) {
+			
+
+		} catch (Exception e) {
+
+		}
+
+	}
+}

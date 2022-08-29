@@ -1,0 +1,22 @@
+package Try;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Ex06 {
+	public static void main(String[] args) {
+		URL url = null;
+		HttpURLConnection conn =null;
+		OutputStreamWriter osw = new OutputStreamWriter(conn.getOutputStream(), "UTF-8");
+		BufferedWriter bw = new BufferedWriter(osw);
+		PrintWriter out = new PrintWriter(bw, false);
+		
+	}
+
+}

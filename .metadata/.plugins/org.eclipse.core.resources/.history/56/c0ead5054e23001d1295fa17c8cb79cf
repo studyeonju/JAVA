@@ -1,0 +1,12 @@
+package URL;
+
+import java.io.BufferedReader;
+import java.net.HttpURLConnection;
+
+public class Ex08 {
+	private static HttpURLConnection connection;
+	public static void main(String[] args) {
+		BufferedReader reader;
+		
+	}
+}

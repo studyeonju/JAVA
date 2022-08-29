@@ -1,0 +1,35 @@
+package URL2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.Charset;
+
+public class ex01 {
+	public static void main(String[] args) {
+		System.out.println("접속할 서버 주소 :");
+		String strUrl="http://www.naver.com";
+		InputStream is =null;
+		BufferedReader br =null;
+		URL url;
+		try {
+			url = new URL(strUrl);
+			is = url.openStream();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try
+		BufferedReader br = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+
+		System.out.println("@@@" + strUrl);
+		String data = "";
+		while ((data = br.readLine()) != null) {
+			System.out.println(data);
+		}
+
+	}
+}

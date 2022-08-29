@@ -1,0 +1,31 @@
+package URL2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.nio.charset.Charset;
+
+public class ex01 {
+	public static void main(String[] args) {
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("접속할 서버 주소 :");
+			String strUrl;
+			try {
+				strUrl = br.readLine();
+				URL url = new URL(strUrl);
+				InputStream is = url.openStream();
+				br = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+				String data = "";
+				while ((data = br.readLine()) != null) {
+					System.out.println(data);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+
+	}
+}

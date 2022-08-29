@@ -1,0 +1,9 @@
+package Enum;
+
+public class PayGroupTest {
+	public static void main(String[] args) {
+		for(PayGroup type : PayGroup.values()) {
+			System.out.println("결제종류"+type.getTitle());
+		}
+	}
+}

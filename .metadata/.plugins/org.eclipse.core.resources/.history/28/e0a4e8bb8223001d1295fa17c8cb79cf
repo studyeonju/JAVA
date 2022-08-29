@@ -1,0 +1,35 @@
+package URL;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URL;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+public class Ex08 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("[HttpURLConnection 사용해  post body json 방식 데이터 요청 및 응답 값 확인 실시]");
+		
+		/*[설 명]
+		 * 1. HttpURLConnection은 http 통신을 수행할 객체입니다
+		 * 2. URL 객체로 connection을 만듭니다
+		 * 3. 응답받은 결과를 InputStream으로 받아서 버퍼에 순차적으로 쌓습니다
+		 * */
+		
+		//데이터 정의 실시
+		String url = "http://jsonplaceholder.typicode.com/posts";
+				
+		String data = "{ \"userId\" : \"1\", \"id\" : \"1\" }"; //json 형식 데이터
+		
+		//메소드 호출 실시
+		httpPostBodyConnection(url, data);
+
+	}//메인 종료
+//	
+		
+}

@@ -1,0 +1,18 @@
+package RegularExpression2;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ex04 {
+	public static void main(String[] args) {
+		String regex = "(02|010)-\\d{3,4}-\\d{4}";
+		String str = "1231238ss";
+		
+		Pattern pattern = Pattern.compile(regex); // ��������
+		Matcher match = pattern.matcher(str); // ��ġ �Ǵ� ���� ����
+		
+		while(match.find()) { //��ġ�Ȱ��� ������ true ������ false
+			System.out.println(match.group());// ��ġ�� ���� ��ȯ.
+		} 
+	}
+}

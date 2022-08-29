@@ -1,0 +1,41 @@
+package Try;
+
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
+
+public class Ex05 {
+	public static void main(String[] args) {
+		a();
+	}
+
+	private static void a() {
+		try (Socket socket = new Socket();
+			OutputStreamWriter osw = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");
+			BufferedWriter bw = new BufferedWriter(osw);
+			) {
+			if(IS_URL_ENCODE_TO_PS_SERVER)
+				out.println(URLEncoder.encode(jsonData, "UTF-8"));
+			else
+				out.println(jsonData);
+
+			out.flush();
+			
+		    
+		    result = IOUtils.toString(new InputStreamReader(ungzippedResponse, StandardCharsets.UTF_8));
+
+		    Map<String,Object> info = (Map<String,Object>)JSONValue.parse(result);
+		    
+		    result = ((boolean)info.get("success")) ? (String)info.get("data") : (String)info.get("data");
+		    
+
+		} catch (Exception e) {
+
+		}
+
+	}
+}

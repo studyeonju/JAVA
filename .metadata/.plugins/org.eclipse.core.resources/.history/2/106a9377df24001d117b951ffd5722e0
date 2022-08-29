@@ -1,0 +1,28 @@
+package RegularExpression2;
+
+
+public class ex07 {
+	public static void main(String[] args) {
+		//replace()
+		String str = "����? Ȳ��? �鵵? ���丮? ���ٸ�";
+		System.out.println(str.replace("��", "��"));
+		//replaceAll()
+		String str2 = "����? Ȳ��? �鵵? ���丮? ���ٸ�";
+		System.out.println(str2.replaceAll("��", "��"));
+		
+		System.out.println("-------------------------------------------");
+		
+		//replace()		
+		String str1 = "����@., Ȳ��@., �鵵@., ���丮@., ���ٸ�@";
+		System.out.println(str1.replace(".", "/"));
+		//replaceAll()
+		String str3 = "����@., Ȳ��@., �鵵@., ���丮@., ���ٸ�@";
+		System.out.println(str3.replaceAll(".", "/"));
+		
+		
+		String number = "dsfjknwenrw.?n2++3!12@3njsndjsa12sdfs09ddd042,2911///@";
+		System.out.println(number.replaceAll("[^0-9]", ""));
+		
+	}
+}
+

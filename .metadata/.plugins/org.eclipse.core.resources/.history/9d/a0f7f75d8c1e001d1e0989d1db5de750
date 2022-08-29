@@ -1,9 +1,0 @@
-package URL;
-
-public class Ex02 {
-	static URL url = null;
-	static URLConnection conn = null;
-	public static void main(String[] args) {
-		
-	}
-}

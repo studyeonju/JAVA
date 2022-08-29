@@ -1,0 +1,30 @@
+package Try;
+
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class Ex05 {
+	public static void main(String[] args) {
+		a();
+	}
+
+	private static void a() {
+		URL url = new URL("http://localhost:8080/main");
+		HttpURLConnection conn =  url.openConnection();
+		try (
+			
+			OutputStreamWriter osw = new OutputStreamWriter(, "UTF-8");
+			BufferedWriter bw = new BufferedWriter(osw);
+			PrintWriter out = new PrintWriter(bw, false);
+			) {
+			
+
+		} catch (Exception e) {
+
+		}
+
+	}
+}

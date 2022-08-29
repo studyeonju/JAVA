@@ -1,0 +1,23 @@
+package Enum;
+
+public class Ex02 {
+	public static final String DOG ="dog";
+	public static final String CAT ="cat";
+	public static void main(String[] args) {
+		String animal;
+		
+		animal = Ex02.DOG;
+		animal = Ex02.CAT;
+		animal="bear";
+		
+		Gender gender2;
+		gender2 = Gender.MALE;
+		gender2 = Gender.FEMALE;
+		gender2="girl"; // Type mismatch: cannot convert from String to Gender
+		
+	}
+}
+
+enum Animal{
+	MALE,FEMALE;
+}

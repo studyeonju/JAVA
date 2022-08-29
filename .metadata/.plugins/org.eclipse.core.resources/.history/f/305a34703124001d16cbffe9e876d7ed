@@ -1,0 +1,13 @@
+package Try;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		FileWriter f = new FileWriter("data.txt");
+			f.write("Hello");
+			f.close();
+		}
+		
+	}
